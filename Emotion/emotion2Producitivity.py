@@ -43,7 +43,7 @@ while True:
             v = np.array(PRODUCTIVITY_LIST)
             s = np.sum(v,axis = 0)
             #"Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral"
-            print("\n\n",f"PRODUCTIVITY KPI SCORE:  {abs((10*s[3]+5*s[5]+8*s[6]) - (3*s[0]+9*s[1]+2*s[2]+1.5*s[4]))} ","\n\n\n")
+            print("\n\n",f"PRODUCTIVITY KPI SCORE:  {abs((s[3]+s[5]+2*s[6]) - (s[0]+s[1]+s[2]+s[4]))} ","\n\n\n")
             PRODUCTIVITY_LIST.clear()
         
         max_index = int(np.argmax(predictions))
